@@ -1,0 +1,7 @@
+cv/*.aux
+cv/*.log
+cv/*.fls
+cv/*.fdb_latexmk
+site-bundle.tar.gz
+.edge-profile/
+portfolio-preview.png
