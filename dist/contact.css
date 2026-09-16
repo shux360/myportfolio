@@ -20,17 +20,19 @@
 .ticker .ticker-track {
   display: flex;
   width: max-content;
-  animation: ticker-loop 24s linear infinite;
+  will-change: transform;
+  animation: ticker-loop 20s linear infinite;
 }
 
 .ticker .ticker-track span {
   flex: none;
   display: inline-block;
-  padding-left: 26px;
+  padding: 0 26px;
 }
 
 @keyframes ticker-loop {
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-33.333333%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,35 +41,30 @@
 
 /* Minimal editorial portrait treatment */
 .portrait-wrap.portrait-minimal {
-  width: min(100%, 510px);
-  max-width: 510px;
-  padding: 18px 18px 0;
+  width: min(100%, 480px);
+  max-width: 480px;
+  padding: 0;
   isolation: isolate;
 }
 
 .portrait-wrap.portrait-minimal::before {
   content: "";
   position: absolute;
-  inset: 7% 0 7% 10%;
+  inset: 4% 3% 0;
   z-index: -2;
   background: var(--acid);
-  border-radius: 52% 52% 22px 22px;
+  border-radius: 40% 40% 24px 24px;
 }
 
 .portrait-wrap.portrait-minimal::after {
-  content: "";
-  position: absolute;
-  inset: 13% 7% 1% 2%;
-  z-index: -1;
-  border: 1px solid rgba(7, 17, 15, .55);
-  border-radius: 52% 52% 22px 22px;
+  content: none;
 }
 
 .portrait-minimal .portrait-frame {
-  aspect-ratio: .83;
-  overflow: visible;
+  aspect-ratio: .88;
+  overflow: hidden;
   background: transparent;
-  border-radius: 0;
+  border-radius: 40% 40% 24px 24px;
   box-shadow: none;
 }
 
@@ -78,36 +75,12 @@
 .portrait-minimal .portrait-frame img {
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(0 24px 30px rgba(7, 17, 15, .14));
-}
-
-.portrait-index {
-  position: absolute;
-  top: 13%;
-  right: -14px;
-  font: 500 10px var(--mono);
-  writing-mode: vertical-rl;
-  letter-spacing: .18em;
-}
-
-.portrait-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 15px 4px 0;
-  border-top: 1px solid var(--ink);
-  font: 500 10px var(--mono);
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.portrait-caption span:last-child {
-  color: var(--muted);
-  text-align: right;
+  width: 106%;
+  max-width: none;
+  margin-left: -3%;
+  filter: drop-shadow(0 18px 22px rgba(7, 17, 15, .13));
 }
 
 @media (max-width: 520px) {
-  .portrait-wrap.portrait-minimal { padding-inline: 8px; }
-  .portrait-index { display: none; }
-  .portrait-caption { font-size: 8px; }
+  .portrait-wrap.portrait-minimal { width: min(92vw, 390px); }
 }
