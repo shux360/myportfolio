@@ -4,5 +4,5 @@ cv/*.fls
 cv/*.fdb_latexmk
 site-bundle.tar.gz
 .edge-profile/
-portfolio-preview.png
+portfolio-preview*.png
 .site-package/
