@@ -81,28 +81,26 @@
   filter: drop-shadow(0 18px 22px rgba(7, 17, 15, .13));
 }
 
-.portrait-opportunities {
+.hero-opportunities {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 14px 4px 0;
-  font: 500 9px var(--mono);
-  letter-spacing: .06em;
+  gap: 14px;
+  margin-top: 18px;
+  font: 500 10px var(--mono);
+  letter-spacing: .07em;
   text-transform: uppercase;
 }
 
-.portrait-opportunities span {
+.hero-opportunities span {
   color: #4f9000;
   white-space: nowrap;
 }
 
-.portrait-opportunities strong {
+.hero-opportunities strong {
   font: inherit;
-  text-align: right;
 }
 
 @media (max-width: 520px) {
   .portrait-wrap.portrait-minimal { width: min(92vw, 390px); }
-  .portrait-opportunities { align-items: flex-start; font-size: 8px; }
+  .hero-opportunities { align-items: flex-start; font-size: 8px; line-height: 1.6; }
 }
