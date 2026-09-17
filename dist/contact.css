@@ -115,3 +115,8 @@
 .qualification-score { margin-top:auto; padding-top:24px; border-top:1px solid var(--line); font:500 10px var(--mono); color:var(--muted); }
 .qualification-score strong { float:right; color:var(--ink); }
 @media (max-width:780px) { .qualification-grid { grid-template-columns:1fr; } .qualification-grid article { min-height:270px; } }
+
+/* Keep extended credential rows collapsed until the user requests them. */
+.credential-list > div.extra-credential {
+  display: none;
+}
