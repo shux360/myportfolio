@@ -126,6 +126,10 @@
 .project:hover .project-photo img { transform:scale(1.035); }
 .project-photo-yoga img { object-position:center 43%; }
 .project-photo .art-label { z-index:1; color:white; }
+
+/* The navigation folds away while scrolling down and returns on upward scroll. */
+.nav-shell { transition: transform .32s ease, opacity .25s ease; }
+.nav-shell.nav-hidden { transform: translate(-50%, -140%); opacity: 0; pointer-events: none; }
 .art-cti { background:radial-gradient(circle at 50% 40%,#234b40 0,#0a1d18 58%,#07110f 100%); }
 .art-cti::before { content:""; position:absolute; inset:0; opacity:.22; background-image:linear-gradient(rgba(185,255,61,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(185,255,61,.25) 1px,transparent 1px); background-size:32px 32px; }
 .cti-grid { position:absolute; inset:14% 10% 20%; }
