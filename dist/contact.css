@@ -97,6 +97,8 @@
 .credential-list > div.extra-credential {
   display: none;
 }
+.credential-list.credentials-expanded > div.extra-credential { display:flex; }
+@media(max-width:850px){.credential-list.credentials-expanded > div.extra-credential{display:block}}
 
 .project-photo::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(7,17,15,.65)); pointer-events:none; }
 .project-photo img { width:100%; height:100%; object-fit:cover; display:block; }

@@ -99,8 +99,8 @@
 
     <section id="credentials" class="credentials section-pad reveal">
       <div class="section-head"><div><div class="section-label">05 / Credentials</div><h2>Proof of curiosity.</h2></div><p>Continual learning across cloud, data, machine learning, UX and delivery.</p></div>
-      <div class="credential-tabs" role="tablist"><button class="active" data-tab="certs">Certifications <span>39</span></button><button data-tab="awards">Awards <span>10</span></button></div>
-      <div class="credential-list active" id="certs">
+      <div class="credential-tabs" role="tablist" aria-label="Credentials"><button class="active" id="certs-tab" type="button" role="tab" aria-selected="true" aria-controls="certs" tabindex="0" data-tab="certs">Certifications <span>39</span></button><button id="awards-tab" type="button" role="tab" aria-selected="false" aria-controls="awards" tabindex="-1" data-tab="awards">Awards <span>12</span></button></div>
+      <div class="credential-list active" id="certs" role="tabpanel" aria-labelledby="certs-tab">
         <div><b>AWS Security Fundamentals</b><span>Amazon Web Services · Jun 2026</span></div>
         <div><b>AI Skills Fest 2026</b><span>Microsoft · Jun 2026</span></div>
         <div><b>AWS Agentic AI Demonstrated</b><span>Amazon Web Services · Jun 2026</span></div>
@@ -120,6 +120,9 @@
         <div class="extra-credential"><b>Manage Kubernetes in Google Cloud</b><span>Google · Jan 2025</span></div>
         <div class="extra-credential"><b>Git and GitHub MasterClass: Git Workflow, Commands</b><span>Udemy · Jan 2025</span></div>
         <div class="extra-credential"><b>Professional Certificate in Agile and SCRUM</b><span>Udemy · Jan 2025</span></div>
+        <div class="extra-credential"><b>How to create a Jira SCRUM project</b><span>Coursera · Jul 2024</span></div>
+        <div class="extra-credential"><b>Intro to Machine Learning</b><span>Kaggle · Jun 2024</span></div>
+        <div class="extra-credential"><b>Read JS Tutorial</b><span>Great Learning · May 2024</span></div>
         <div class="extra-credential"><b>Get started with Jira</b><span>Coursera · Apr 2024</span></div>
         <div class="extra-credential"><b>Python (Basic) Certificate</b><span>HackerRank · Apr 2024</span></div>
         <div class="extra-credential"><b>Java (Basic) Certificate</b><span>HackerRank · Apr 2024</span></div>
@@ -131,9 +134,6 @@
         <div class="extra-credential"><b>Social Media Marketing</b><span>HubSpot Academy · Feb 2024 · expired Mar 2026</span></div>
         <div class="extra-credential"><b>Foundations: Data, Data, Everywhere</b><span>Google · Feb 2024</span></div>
         <div class="extra-credential"><b>Create a Supermarket app using OOP Features in Java</b><span>Coursera · Feb 2024</span></div>
-        <div class="extra-credential"><b>Read Js Tutorial</b><span>Great Learning · May 2024</span></div>
-        <div class="extra-credential"><b>Intro to Machine Learning</b><span>Kaggle · Jun 2024</span></div>
-        <div class="extra-credential"><b>How to create a Jira SCRUM project</b><span>Coursera · Jul 2024</span></div>
         <div class="extra-credential"><b>Responsive Web Design</b><span>freeCodeCamp · Sep 2023</span></div>
         <div class="extra-credential"><b>What is Data Science?</b><span>IBM · Aug 2023</span></div>
         <div class="extra-credential"><b>Supervised Machine Learning: Regression and Classification</b><span>DeepLearning.AI · Aug 2023</span></div>
@@ -141,11 +141,11 @@
         <div class="extra-credential"><b>Foundations of User Experience (UX) Design</b><span>Google · Aug 2023</span></div>
         <div class="extra-credential"><b>DevOps Essentials</b><span>IBM · Aug 2023</span></div>
       </div>
-      <div class="credential-list" id="awards">
-        <div><b>Champion - IEEE FYP Arena</b><span>IEEE Sri Lanka Section · 2026</span></div><div><b>Finalist - CodeBlast AI Hackathon</b><span>SLTMobitel · 2026</span></div><div><b>Champion - CryptX 1.0</b><span>ICTS, University of Sri Jayewardenepura · 2025</span></div><div><b>Champion - InsurgeX 1.0</b><span>University of Ruhuna · 2024</span></div><div><b>Semi-finalist - IDEALIZE’24</b><span>AIESEC, University of Moratuwa · 2024</span></div><div><b>3rd - Weather Classification, Predictia 1.0</b><span>IEEE, University of Peradeniya · 2024</span></div>
+      <div class="credential-list" id="awards" role="tabpanel" aria-labelledby="awards-tab">
+        <div><b>Champion - IEEE FYP Arena</b><span>IEEE Sri Lanka Section · 2026</span></div><div><b>Finalist - CodeBlast AI Hackathon</b><span>SLTMobitel · 2026</span></div><div><b>Champion - CryptX 1.0</b><span>ICTS, University of Sri Jayewardenepura · 2025</span></div><div><b>Champion - InsurgeX 1.0</b><span>University of Ruhuna · 2024</span></div><div class="extra-credential"><b>Semi-finalist - IDEALIZE’24</b><span>AIESEC, University of Moratuwa · 2024</span></div><div class="extra-credential"><b>3rd - Weather Classification, Predictia 1.0</b><span>IEEE, University of Peradeniya · 2024</span></div>
         <div class="extra-credential"><b>31st - MORAXTREME 8.0</b><span>IEEE, University of Moratuwa · 2023</span></div><div class="extra-credential"><b>17th - HaXtreme 2.0</b><span>IEEE, University of Ruhuna · 2023</span></div><div class="extra-credential"><b>2nd Runner-up - Sustainable Building Design</b><span>CEES · 2023</span></div><div class="extra-credential"><b>T. Fonseka Memorial Prize</b><span>Dharmaraja College · 2021</span></div><div class="extra-credential"><b>Dagoba - Athletics</b><span>Dharmaraja College · 2019</span></div><div class="extra-credential"><b>HD Excellence - Australian National Chemistry Quiz</b><span>All-island 2nd · 2019</span></div>
       </div>
-      <button class="see-more credential-more">See all credentials <span>＋</span></button>
+      <button class="see-more credential-more" type="button" aria-expanded="false" aria-controls="certs">See all credentials <span>＋</span></button>
     </section>
 
     <section id="contact" class="contact section-pad reveal">
